@@ -14,6 +14,8 @@
 
 LOCAL_PATH := $(call my-dir)
 
+ifneq ($(filter violet whyred lavender beryllium,$(TARGET_DEVICE)),)
+
 include $(CLEAR_VARS)
 LOCAL_MODULE := QPerformance
 LOCAL_MODULE_OWNER := qti
@@ -33,3 +35,5 @@ LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_CLASS := JAVA_LIBRARIES
 LOCAL_MODULE_SUFFIX := .jar
 include $(BUILD_PREBUILT)
+
+endif
